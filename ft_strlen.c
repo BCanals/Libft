@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/26 23:08:08 by bizcru            #+#    #+#             */
-/*   Updated: 2024/06/27 00:30:40 by bizcru           ###   ########.fr       */
+/*   Created: 2024/06/27 01:00:25 by bizcru            #+#    #+#             */
+/*   Updated: 2024/06/27 01:17:04 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-int	ft_isalpha(int c)
+long unsigned int	ft_strlen(const char *s)
 {
-	if (ft_isupper(c) || ft_islower(c))
-		return (1024);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (*s != 0)
+	{
+		i++;
+		s++;
+	}
+	return (i);
 }
