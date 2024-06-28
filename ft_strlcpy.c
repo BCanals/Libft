@@ -6,11 +6,11 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 14:30:19 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/06/27 02:21:33 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/06/27 20:29:31 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+long unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 
