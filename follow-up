@@ -1,0 +1,24 @@
+[x] isalpha
+[x] isdigit
+[x] isalnum
+[x] isascii
+[x] isprint
+[x] strlen
+[ ] memset
+[ ] bzero
+[ ] memcpy
+[ ] memmove
+[x] strlcpy
+[x] strlcat
+[x] toupper
+[x] tolower
+[ ] strchr
+[ ] strrchr
+[x] strncmp
+[ ] memchr
+[ ] memcmp
+[ ] strnstr
+[x] atoi
+
+[ ] calloc
+[ ] strdup

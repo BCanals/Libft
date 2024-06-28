@@ -29,7 +29,7 @@ TESTO = $(TEST:.c=.o)
 
 test: $(TESTO) $(NAME)
 	gcc $(CFLAGS) -c $(TEST)
-	gcc $(TESTO) -L. -lft -o $(TESTNAME)
+	gcc $(TESTO) -L. -lft -lbsd -o $(TESTNAME)
 
 %.o: %.c
 	gcc $(CFLAGS) -I. -c $< -o $@
