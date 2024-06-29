@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: bizcru <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/06/28 15:47:58 by bizcru            #+#    #+#              #
+#    Updated: 2024/06/28 15:52:36 by bizcru           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 CFLAGS = -Wall -Wextra -Werror
@@ -16,8 +28,10 @@ SRCS = ft_islower.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
 		ft_strncmp.c \
-		ft_atoi.c
-	
+		ft_atoi.c \
+		ft_strdup.c \
+		ft_memcpy.c \
+		ft_memmove.c
 
 OBJS = $(SRCS:.c=.o)
 

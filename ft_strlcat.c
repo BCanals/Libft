@@ -6,11 +6,11 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:53:34 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/06/27 21:14:09 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/06/28 15:28:02 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
+long unsigned int	ft_strlcat(char *dest, const char *src, long unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
