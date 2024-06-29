@@ -1,0 +1,21 @@
+# ignore object files and archive files
+*.o
+*.a
+
+# Ignore a specific file
+test.c
+test
+follow-up
+
+# Ignore all directories
+*/
+# Ignore object files and archive files
+*.o
+*.a
+
+# Ignore a specific file
+test.c
+
+# Ignore all directories
+*/
+

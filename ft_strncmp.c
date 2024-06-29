@@ -6,11 +6,11 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:22:44 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/06/28 00:14:23 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/06/28 15:28:16 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, long unsigned int n)
 {
 	int				retr;
 	unsigned int	i;
