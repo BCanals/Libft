@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmov.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 15:50:13 by bizcru            #+#    #+#             */
-/*   Updated: 2024/06/28 16:09:31 by bizcru           ###   ########.fr       */
+/*   Created: 2024/07/01 20:47:43 by bizcru            #+#    #+#             */
+/*   Updated: 2024/07/01 22:58:52 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-void	*ft_memmove(void *dest, const void *src, long unsigned int n)
+char	*ft_strchr(const char *s, int c)
 {
-	void *copy;
-
-	copy = malloc(n);
-	ft_memcpy(copy, src, n);
-	ft_memcpy(dest, copy, n);
-	return (dest);
+	while (*s)
+	{
+		if (*s == c)
+			return (char *)(s);
+		s++;
+	}
+	if (c == 0)
+		return (char *)(s);
+	return (NULL);
 }

@@ -6,11 +6,13 @@
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 01:00:25 by bizcru            #+#    #+#             */
-/*   Updated: 2024/06/27 01:17:04 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/07/01 20:49:32 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long unsigned int	ft_strlen(const char *s)
+#include <stddef.h>
+
+size_t ft_strlen(const char *s)
 {
 	int	i;
 
