@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bcanals- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 14:38:42 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/04 16:00:23 by bcanals-         ###   ########.fr       */
+/*   Created: 2024/07/04 18:49:18 by bcanals-          #+#    #+#             */
+/*   Updated: 2024/07/04 20:05:11 by bcanals-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stddef.h>
 
-char	*ft_strdup(const char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*rtrn;
-	char	*i;
+	unsigned int	size;
+	char			*rtrn;
 
-	rtrn = malloc(ft_strlen(s) + 1);
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	rtrn = malloc(size);
 	if (rtrn == NULL)
 		return (NULL);
-	i = rtrn;
-	while (*s)
-	{
-		*i = *s;
-		i++;
-		s++;
-	}
-	*i = 0;
+	ft_memmove((void *)rtrn, s1, ft_strlen(s1));
+	rtrn += ft_strlen(s1);
+	ft_memmove(rtrn, s2, ft_strlen(s2));
+	rtrn[size] = '\0';
+	rtrn -= ft_strlen(s1);
 	return (rtrn);
 }
