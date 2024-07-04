@@ -6,7 +6,7 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 15:18:02 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/06/28 12:13:04 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/07/04 13:33:27 by bcanals-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ int	ft_atoi(const char *str)
 			sign *= -1;
 		i++;
 	}
-	if (ft_strncmp("9223372036854775808", &str[i], 20) <= 0)
-		return (-1);
 	rtrn = 0;
 	while (str[i] >= 48 && str[i] <= 57)
 	{

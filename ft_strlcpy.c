@@ -6,13 +6,13 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 14:30:19 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/07/01 20:51:06 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/07/04 11:56:41 by bcanals-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t ft_strlcpy(char *dest, char *src, size_t size)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	unsigned int	i;
 

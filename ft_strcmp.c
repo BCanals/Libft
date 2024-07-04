@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 15:21:23 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/04 18:47:56 by bcanals-         ###   ########.fr       */
+/*   Created: 2024/05/03 13:22:44 by bcanals-          #+#    #+#             */
+/*   Updated: 2024/07/04 17:13:44 by bcanals-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stddef.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned char		*dest2;
-	unsigned const char	*src2;
-	size_t				i;
+	int				retr;
+	unsigned int	i;
 
 	i = 0;
-	dest2 = dest;
-	src2 = src;
-	while (i < n)
+	retr = 0;
+	while (s1[i] != 0 && s2[i] != 0)
 	{
-		dest2[i] = src2[i];
+		retr = (unsigned char)s1[i] - (unsigned char)s2[i];
+		if (retr != 0)
+			return (retr);
 		i++;
 	}
-	return (dest);
+	return (retr);
 }

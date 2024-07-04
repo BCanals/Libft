@@ -6,7 +6,7 @@
 #    By: bizcru <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/28 15:47:58 by bizcru            #+#    #+#              #
-#    Updated: 2024/07/01 23:16:13 by bizcru           ###   ########.fr        #
+#    Updated: 2024/07/04 13:13:30 by bcanals-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME = libft.a
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_islower.c \
+SRCS = $(wildcard *.c) 	
+
+#ft_islower.c \
 		ft_isupper.c \
 		ft_isalpha.c \
 		ft_isdigit.c \
@@ -31,10 +33,12 @@ SRCS = ft_islower.c \
 		ft_atoi.c \
 		ft_strdup.c \
 		ft_memcpy.c \
+		ft_memrcpy.c \
 		ft_memmove.c \
 		ft_strchr.c \
 		ft_strrchr.c \
-		ft_memset.c
+		ft_memset.c \
+		ft_bzero.c
 
 OBJS = $(SRCS:.c=.o)
 

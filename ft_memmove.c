@@ -6,7 +6,7 @@
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 15:50:13 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/01 21:37:00 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/07/04 12:45:37 by bcanals-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,13 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*copy[4294967295];
-
-	ft_memcpy(copy, src, n);
-	ft_memcpy(dest, copy, n);
+	if (dest > src)
+	{
+		ft_memrcpy(dest, src, n);
+	}
+	else if (src > dest)
+	{
+		ft_memcpy(dest, src, n);
+	}
 	return (dest);
 }
