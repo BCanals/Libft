@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 15:21:23 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/05 12:30:44 by bizcru           ###   ########.fr       */
+/*   Created: 2024/07/05 16:05:52 by bizcru            #+#    #+#             */
+/*   Updated: 2024/07/05 17:38:21 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
+#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char		*dest2;
-	unsigned const char	*src2;
-	size_t				i;
+	unsigned int	start;
+	unsigned int	end;
 
-	if (!dest || !src)
-		return (dest);
-	i = 0;
-	dest2 = dest;
-	src2 = src;
-	while (i < n)
-	{
-		dest2[i] = src2[i];
-		i++;
-	}
-	return (dest);
+	if (!s1 || !set)
+		return ((char *)s1);
+	start = 0;
+	if (ft_strlen(s1) == 0)
+		end = 0;
+	else
+		end = ft_strlen(s1) - 1;
+	while (ft_strchr(set, s1[start]) && s1[start] != 0)
+		start++;
+	while (ft_strchr(set, s1[end]) && end > start)
+		end--;
+	return (ft_strndup(&s1[start], end - start + 1));
 }

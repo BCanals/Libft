@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 15:21:23 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/05 12:30:44 by bizcru           ###   ########.fr       */
+/*   Created: 2024/07/06 03:31:08 by bizcru            #+#    #+#             */
+/*   Updated: 2024/07/06 03:47:00 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned char		*dest2;
-	unsigned const char	*src2;
-	size_t				i;
-
-	if (!dest || !src)
-		return (dest);
-	i = 0;
-	dest2 = dest;
-	src2 = src;
-	while (i < n)
-	{
-		dest2[i] = src2[i];
-		i++;
-	}
-	return (dest);
+	if (fd < 0 || !s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd(10, fd);
 }

@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 15:21:23 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/05 12:30:44 by bizcru           ###   ########.fr       */
+/*   Created: 2024/07/06 03:34:37 by bizcru            #+#    #+#             */
+/*   Updated: 2024/07/06 04:01:31 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
+#include <unistd.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+static void	my_putnbr(unsigned int n, int fd)
 {
-	unsigned char		*dest2;
-	unsigned const char	*src2;
-	size_t				i;
+	char	nbr;
 
-	if (!dest || !src)
-		return (dest);
-	i = 0;
-	dest2 = dest;
-	src2 = src;
-	while (i < n)
+	if (n > 9)
+		my_putnbr(n / 10, fd);
+	nbr = n % 10 + 48;
+	write(fd, &nbr, 1);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (fd < 0)
+		return ;
+	if (n < 0)
 	{
-		dest2[i] = src2[i];
-		i++;
+		write(fd, "-", 1);
+		my_putnbr((unsigned int) ~(n - 1), fd);
 	}
-	return (dest);
+	else
+		my_putnbr((unsigned int)n, fd);
 }
