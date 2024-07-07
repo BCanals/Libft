@@ -6,14 +6,14 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 18:39:05 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/07/04 14:35:39 by bcanals-         ###   ########.fr       */
+/*   Updated: 2024/07/06 14:21:49 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-void	ft_write_addr(unsigned long addr, char *hex)
+static void	ft_write_addr(unsigned long addr, char *hex)
 {
 	int	i;
 	int	r;
@@ -38,7 +38,7 @@ void	ft_write_addr(unsigned long addr, char *hex)
 	write(1, ": ", 2);
 }
 
-void	ft_write_char_hex(char c)
+static void	ft_write_char_hex(char c)
 {
 	char			t;
 	char			u;
@@ -59,7 +59,7 @@ void	ft_write_char_hex(char c)
 	write(1, &u, 1);
 }
 
-void	ft_write_char(char *ad_char, unsigned int i, unsigned int size)
+static void	ft_write_char(char *ad_char, unsigned int i, unsigned int size)
 {
 	int		j;
 	char	c;
@@ -76,7 +76,7 @@ void	ft_write_char(char *ad_char, unsigned int i, unsigned int size)
 	}
 }
 
-void	ft_write_cont_hex(char *ad_char, unsigned int i, unsigned int size)
+static void	ft_write_cont_hex(char *ad_char, unsigned int i, unsigned int size)
 {
 	int	j;
 

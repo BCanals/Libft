@@ -6,7 +6,7 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 15:18:02 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/07/06 02:54:10 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/07/06 14:23:56 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stddef.h>
 #include <limits.h>
 
-int	get_num_digits(int n)
+static int	get_num_digits(int n)
 {
 	int	i;
 
@@ -32,14 +32,14 @@ int	get_num_digits(int n)
 	return (i);
 }
 
-int	abs(int n)
+static int	my_abs(int n)
 {
 	if (n < 0)
 		n *= -1;
 	return (n);
 }
 
-void	fill(char *rtrn, int n, int size)
+static void	fill(char *rtrn, int n, int size)
 {
 	rtrn[size] = 0;
 	size--;
@@ -53,7 +53,7 @@ void	fill(char *rtrn, int n, int size)
 	}
 }
 
-char	*manage_int_min(void)
+static char	*manage_int_min(void)
 {
 	int		size;
 	char	*rtrn;
@@ -85,7 +85,7 @@ char	*ft_itoa(int n)
 	rtrn = malloc(size + 1);
 	if (rtrn == NULL)
 		return (NULL);
-	fill(rtrn, abs(n), size);
+	fill(rtrn, my_abs(n), size);
 	if (n < 0)
 		rtrn[0] = 45;
 	return (rtrn);
