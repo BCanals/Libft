@@ -9,4 +9,4 @@ follow-up
 # Ignore all directories
 */
 
-
+*.swp

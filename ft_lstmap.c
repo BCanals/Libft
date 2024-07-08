@@ -6,7 +6,7 @@
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 04:17:34 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/08 05:06:04 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/07/08 17:40:16 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*rtrn;
 
-	rtrn = malloc(sizeof(t_list *));
-	if (!lst || !f || !del || !rtrn)
+	if (!lst || !f || !del)
 		return (NULL);
 	rtrn = NULL;
 	while (lst)
