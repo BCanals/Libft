@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrimu.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 16:05:52 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/08 00:19:15 by bizcru           ###   ########.fr       */
+/*   Created: 2024/07/08 04:17:34 by bizcru            #+#    #+#             */
+/*   Updated: 2024/07/19 12:52:48 by bcanals-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 #include <stdlib.h>
 
-char	*ft_strtrimu(char *s1, char const set)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char			*rtrn;
-	unsigned int	start;
-	unsigned int	end;
-	unsigned int	str_size;
+	t_list	*rtrn;
+	t_list	*last;
+	t_list	*my_list;
 
-	str_size = ft_strlen(s1);
-	if (!s1 || !set)
-		return ((char *)s1);
-	start = 0;
-	if (str_size == 0)
-		end = 0;
-	else
-		end = str_size - 1;
-	while (s1[start] == set && s1[start] != 0)
-		start++;
-	while (s1[end] == set && end > start)
-		end--;
-	rtrn = ft_strndup(&s1[start], end - start + 1);
-	free(s1);
+	my_list = lst;
+	if (!my_list || !f || !del)
+		return (NULL);
+	rtrn = NULL;
+	while (my_list)
+	{
+		last = malloc(sizeof(t_list));
+		if (!last)
+		{
+			ft_lstclear(&rtrn, del);
+			return (NULL);
+		}
+		last->content = f(my_list->content);
+		last->next = NULL;
+		ft_lstadd_back(&rtrn, last);
+		my_list = my_list->next;
+	}
 	return (rtrn);
 }
