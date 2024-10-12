@@ -6,7 +6,7 @@
 #    By: bizcru <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/28 15:47:58 by bizcru            #+#    #+#              #
-#    Updated: 2024/07/19 21:01:36 by bcanals-         ###   ########.fr        #
+#    Updated: 2024/10/13 01:58:37 by bizcru           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,8 @@ SRCS = ft_islower.c \
 		ft_memcmp.c \
 		ft_memset.c \
 		ft_memchr.c \
+		ft_putnbr_base.c \
+		ft_print_memory.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_bzero.c \
