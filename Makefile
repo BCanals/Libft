@@ -6,7 +6,7 @@
 #    By: bizcru <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/28 15:47:58 by bizcru            #+#    #+#              #
-#    Updated: 2024/10/13 01:58:37 by bizcru           ###   ########.fr        #
+#    Updated: 2024/10/13 02:52:42 by bizcru           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,6 @@ SRCS = ft_islower.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_strtrim.c \
-		ft_atoi.c \
 		ft_strdup.c \
 		ft_memcpy.c \
 		ft_memrcpy.c \
@@ -55,6 +54,7 @@ SRCS = ft_islower.c \
 		ft_bzero.c \
 		ft_calloc.c \
 		ft_itoa.c \
+		ft_itoa_u.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
