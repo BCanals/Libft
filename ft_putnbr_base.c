@@ -6,7 +6,7 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 15:59:46 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/05/13 14:33:10 by bcanals-         ###   ########.fr       */
+/*   Updated: 2024/10/13 02:42:48 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,60 +50,57 @@ int	check_arguments(char *base)
 	return (1);
 }
 
-void	ft_putnbr_base_easy(int nbr, char *base, int size)
+int	ft_putnbr_base_easy(int nbr, char *base, int size, int *count)
 {
-	char	c;
+	char		c;
 
 	if (nbr == 0)
 	{
 		write(1, &base[0], 1);
-		return ;
+		return (++*count);
 	}
 	else if (nbr >= size)
-		ft_putnbr_base_easy(nbr / size, base, size);
+		ft_putnbr_base_easy(nbr / size, base, size, count);
 	c = base[nbr % size];
 	write(1, &c, 1);
+	return (++*count);
 }
 
-void	manage_int_min(int size, char *base)
+int	manage_int_min(int size, char *base, int *count)
 {
-	char	c;
-	int		nbr;
+	char		c;
+	int			nbr;
 
 	write(1, "-", 1);
+	(*count)++;
 	nbr = 2147483648 / size;
-	ft_putnbr_base_easy(nbr, base, size);
+	ft_putnbr_base_easy(nbr, base, size, count);
 	c = base[2147483648 % size];
 	write(1, &c, 1);
+	return (++*count);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_putnbr_base(int nbr, char *base)
 {
 	int		size;
 	char	c;
+	int		count;
 
+	count = 0;
 	if (check_arguments(base) == 0)
-		return ;
+		return (0);
 	size = get_base_size(base);
 	if (nbr == -2147483648)
-	{
-		manage_int_min(size, base);
-		return ;
-	}
+		return (manage_int_min(size, base, &count));
 	else if (nbr == 0)
-	{
-		write(1, &base[0], 1);
-		return ;
-	}
+		return (write(1, &base[0], 1));
 	else if (nbr < 0)
-	{
-		write(1, "-", 1);
-		nbr *= -1;
-	}
+		return (write(1, "-", 1));
 	if (nbr >= size)
-		ft_putnbr_base_easy(nbr / size, base, size);
+		ft_putnbr_base_easy(nbr / size, base, size, &count);
 	c = base[nbr % size];
 	write(1, &c, 1);
+	return (++*count);
 }
 /*
 int main ()
