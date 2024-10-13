@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_u.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 15:59:46 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/10/13 03:24:16 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/13 03:35:23 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	get_base_size(char *base)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (base[i] != 0)
@@ -50,7 +50,7 @@ int	check_arguments(char *base)
 	return (1);
 }
 
-int	ft_putnbr_base_easy(int nbr, char *base, int size, int *count)
+int	ft_putnbr_base_easy(unsigned int nbr, char *base, unsigned int size, int *count)
 {
 	char		c;
 
@@ -66,41 +66,23 @@ int	ft_putnbr_base_easy(int nbr, char *base, int size, int *count)
 	return (++*count);
 }
 
-int	manage_int_min(int size, char *base, int *count)
+int	ft_putnbr_base_u(unsigned int nbr, char *base)
 {
-	char		c;
-	int			nbr;
-
-	write(1, "-", 1);
-	(*count)++;
-	nbr = 2147483648 / size;
-	ft_putnbr_base_easy(nbr, base, size, count);
-	c = base[2147483648 % size];
-	write(1, &c, 1);
-	return (++*count);
-}
-
-int	ft_putnbr_base(int nbr, char *base)
-{
-	int		size;
-	char	c;
-	int		count;
+	unsigned int	size;
+	char			c;
+	int				count;
 
 	count = 0;
 	if (check_arguments(base) == 0)
 		return (0);
 	size = get_base_size(base);
-	if (nbr == -2147483648)
-		return (manage_int_min(size, base, &count));
-	else if (nbr == 0)
+	if (nbr == 0)
 		return (write(1, &base[0], 1));
-	else if (nbr < 0)
-		return (write(1, "-", 1));
 	if (nbr >= size)
 		ft_putnbr_base_easy(nbr / size, base, size, &count);
 	c = base[nbr % size];
 	write(1, &c, 1);
-	return (++*count);
+	return (++count);
 }
 /*
 int main ()
