@@ -6,13 +6,13 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 15:59:46 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/10/13 03:24:16 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/17 16:09:17 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	get_base_size(char *base)
+static int	get_base_size(char *base)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	get_base_size(char *base)
 	return (i);
 }
 
-int	check_arguments(char *base)
+static int	check_arguments(char *base)
 {
 	int	i;
 	int	j;
@@ -50,7 +50,7 @@ int	check_arguments(char *base)
 	return (1);
 }
 
-int	ft_putnbr_base_easy(int nbr, char *base, int size, int *count)
+static int	ft_putnbr_base_easy(int nbr, char *base, int size, int *count)
 {
 	char		c;
 
@@ -66,7 +66,7 @@ int	ft_putnbr_base_easy(int nbr, char *base, int size, int *count)
 	return (++*count);
 }
 
-int	manage_int_min(int size, char *base, int *count)
+static int	manage_int_min(int size, char *base, int *count)
 {
 	char		c;
 	int			nbr;
@@ -100,7 +100,7 @@ int	ft_putnbr_base(int nbr, char *base)
 		ft_putnbr_base_easy(nbr / size, base, size, &count);
 	c = base[nbr % size];
 	write(1, &c, 1);
-	return (++*count);
+	return (++count);
 }
 /*
 int main ()
