@@ -6,7 +6,7 @@
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 23:37:11 by bizcru            #+#    #+#             */
-/*   Updated: 2024/10/18 16:34:56 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:37:01 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stddef.h>
-# include 
+# include <stdio.h>
 
 typedef struct s_list
 {
