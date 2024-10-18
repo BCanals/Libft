@@ -6,14 +6,11 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 15:18:02 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/07/06 14:23:56 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:23:53 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stddef.h>
-#include <limits.h>
 
 static int	get_num_digits(int n)
 {

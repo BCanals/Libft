@@ -6,11 +6,11 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:53:34 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/07/01 20:39:03 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:33:41 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

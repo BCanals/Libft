@@ -6,11 +6,11 @@
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 20:47:43 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/04 13:48:58 by bcanals-         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:33:14 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

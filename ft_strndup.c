@@ -6,13 +6,11 @@
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 14:38:42 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/05 17:10:31 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:34:18 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stddef.h>
 
 char	*ft_strndup(const char *s, size_t n)
 {

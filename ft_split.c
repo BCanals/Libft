@@ -6,13 +6,11 @@
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 17:41:12 by bizcru            #+#    #+#             */
-/*   Updated: 2024/07/19 12:42:04 by bcanals-         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:33:04 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 static unsigned int	count_splits(char const *s, char c)
 {

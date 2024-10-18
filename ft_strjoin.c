@@ -6,13 +6,11 @@
 /*   By: bcanals- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 18:49:18 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/07/05 12:17:38 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:33:32 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stddef.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

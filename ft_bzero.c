@@ -6,11 +6,10 @@
 /*   By: bcanals- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 11:28:42 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/07/04 12:01:24 by bcanals-         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:11:42 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

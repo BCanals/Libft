@@ -6,14 +6,19 @@
 /*   By: bizcru <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 23:37:11 by bizcru            #+#    #+#             */
-/*   Updated: 2024/10/13 03:34:09 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:34:56 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdarg.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <limits.h>
 # include <stddef.h>
+# include 
 
 typedef struct s_list
 {
@@ -59,11 +64,11 @@ char	*ft_itoa_u(unsigned int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_putnbr_base(int nbr, char *base);
-int		ft_putnbr_base_u(unsigned int nbr, char *base);
+int		ft_putnbr_base_u(size_t nbr, char *base);
 t_list	*ft_lstnew(void	*content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -73,5 +78,13 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+int		ft_printf(const char *format, ...);
+int		ft_printf_char(va_list *args);
+int		ft_printf_dec(va_list *args);
+int		ft_printf_unsigned(va_list *args);
+int		ft_printf_hex(va_list *args, char type);
+int		ft_printf_ptr(va_list *args);
+ 
 
 #endif

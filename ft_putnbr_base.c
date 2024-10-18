@@ -6,11 +6,11 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 15:59:46 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/10/17 16:09:17 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:32:25 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 static int	get_base_size(char *base)
 {
@@ -95,16 +95,13 @@ int	ft_putnbr_base(int nbr, char *base)
 	else if (nbr == 0)
 		return (write(1, &base[0], 1));
 	else if (nbr < 0)
-		return (write(1, "-", 1));
+	{
+		write(1, "-", 1);
+		count++;
+	}
 	if (nbr >= size)
 		ft_putnbr_base_easy(nbr / size, base, size, &count);
 	c = base[nbr % size];
 	write(1, &c, 1);
 	return (++count);
 }
-/*
-int main ()
-{
-	char c[] = "+123456789abcdef";
-	ft_putnbr_base(42, c);	
-}*/

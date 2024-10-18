@@ -6,11 +6,10 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:22:44 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/07/04 17:13:44 by bcanals-         ###   ########.fr       */
+/*   Updated: 2024/10/18 16:33:19 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)

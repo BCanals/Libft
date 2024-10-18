@@ -6,12 +6,11 @@
 /*   By: bcanals- <bcanals-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 18:39:05 by bcanals-          #+#    #+#             */
-/*   Updated: 2024/10/17 16:10:00 by bizcru           ###   ########.fr       */
+/*   Updated: 2024/10/18 16:30:52 by bizcru           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 static void	ft_write_addr(unsigned long addr, char *hex)
 {
